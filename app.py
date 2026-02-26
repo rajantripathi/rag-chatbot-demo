@@ -35,25 +35,26 @@ st.markdown("""
     /* Reset & Global */
     .stApp {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        background: #fafbfc;
-        color: #1f2937;
+        background: #f8fafc;
+        color: #1e293b;
     }
     .stApp p, .stApp li, .stApp span, .stApp div {
-        color: #1f2937;
+        color: #1e293b;
     }
     .stMarkdown p {
-        color: #1f2937 !important;
+        color: #1e293b !important;
     }
-    
+
     /* Hero Header */
     .hero {
-        background: linear-gradient(145deg, #0c0a1a 0%, #1a103a 40%, #2d1a5e 70%, #4c1d95 100%);
+        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #0ea5e9 100%);
         padding: 2.5rem 2.5rem 2rem;
         border-radius: 20px;
         margin-bottom: 1.5rem;
         position: relative;
         overflow: hidden;
-        border: 1px solid rgba(139, 92, 246, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(30, 64, 175, 0.15);
     }
     .hero::before {
         content: '';
@@ -62,7 +63,7 @@ st.markdown("""
         right: -15%;
         width: 400px;
         height: 400px;
-        background: radial-gradient(circle, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
         border-radius: 50%;
     }
     .hero::after {
@@ -72,7 +73,7 @@ st.markdown("""
         left: 10%;
         width: 250px;
         height: 250px;
-        background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
         border-radius: 50%;
     }
     .hero-title {
@@ -82,14 +83,16 @@ st.markdown("""
         margin: 0 0 0.4rem 0;
         position: relative;
         letter-spacing: -0.02em;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .hero-subtitle {
-        color: #c4b5fd;
+        color: #e0f2fe;
         font-size: 1rem;
         margin: 0 0 1rem 0;
         position: relative;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.6;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
     .hero-badges {
         position: relative;
@@ -101,26 +104,27 @@ st.markdown("""
         display: inline-flex;
         align-items: center;
         gap: 0.3rem;
-        background: rgba(139, 92, 246, 0.15);
-        border: 1px solid rgba(139, 92, 246, 0.3);
-        color: #ddd6fe;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: #ffffff;
         padding: 0.3rem 0.75rem;
         border-radius: 100px;
         font-size: 0.72rem;
         font-weight: 600;
         letter-spacing: 0.02em;
         text-transform: uppercase;
+        backdrop-filter: blur(4px);
     }
     .badge-green {
-        background: rgba(34, 197, 94, 0.15);
-        border-color: rgba(34, 197, 94, 0.3);
-        color: #86efac;
+        background: rgba(34, 197, 94, 0.25);
+        border-color: rgba(34, 197, 94, 0.4);
+        color: #ffffff;
     }
     
     /* Pipeline visualization */
     .pipeline {
         background: #ffffff;
-        border: 1px solid #e5e7eb;
+        border: 1px solid #e2e8f0;
         border-radius: 16px;
         padding: 1.5rem;
         margin: 1rem 0;
@@ -128,6 +132,7 @@ st.markdown("""
         justify-content: space-between;
         align-items: center;
         gap: 0.5rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .pipeline-step {
         text-align: center;
@@ -136,96 +141,100 @@ st.markdown("""
     .pipeline-icon {
         width: 48px;
         height: 48px;
-        background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+        background: linear-gradient(135deg, #dbeafe, #bfdbfe);
         border-radius: 14px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         font-size: 1.3rem;
         margin-bottom: 0.4rem;
-        border: 1px solid #e9e5f5;
+        border: 1px solid #93c5fd;
     }
     .pipeline-label {
         font-size: 0.72rem;
         font-weight: 700;
-        color: #4c1d95;
+        color: #1e40af;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
     .pipeline-desc {
         font-size: 0.7rem;
-        color: #6b7280;
+        color: #64748b;
         margin-top: 0.15rem;
     }
     .pipeline-arrow {
-        color: #c4b5fd;
+        color: #94a3b8;
         font-size: 1.2rem;
         flex-shrink: 0;
     }
     
     /* Chat messages */
     .msg-user {
-        background: linear-gradient(135deg, #4c1d95, #6d28d9);
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
         color: #ffffff;
         border-radius: 20px 20px 6px 20px;
         padding: 1rem 1.3rem;
         margin: 0.6rem 0;
         margin-left: 15%;
-        font-size: 0.92rem;
-        line-height: 1.5;
-        box-shadow: 0 2px 8px rgba(109, 40, 217, 0.2);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
     }
     .msg-bot {
         background: #ffffff;
-        border: 1px solid #e5e7eb;
+        border: 1px solid #cbd5e1;
         border-radius: 20px 20px 20px 6px;
         padding: 1.2rem 1.5rem;
         margin: 0.6rem 0;
         margin-right: 10%;
-        font-size: 0.92rem;
-        line-height: 1.65;
-        color: #1f2937;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #1e293b;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
     .msg-bot strong {
-        color: #4c1d95;
+        color: #1e40af;
     }
     .msg-bot em {
-        color: #6b7280;
+        color: #64748b;
     }
     .msg-bot blockquote {
-        color: #374151;
-        border-left: 3px solid #c4b5fd;
+        color: #334155;
+        border-left: 3px solid #3b82f6;
         padding-left: 0.8rem;
         margin: 0.5rem 0;
+        background: #f1f5f9;
+        padding: 0.8rem;
+        border-radius: 0 8px 8px 0;
     }
     
     /* Source chips */
     .sources-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.35rem;
+        gap: 0.4rem;
         margin: 0.5rem 0 0.8rem 0;
     }
     .source-chip {
         display: inline-flex;
         align-items: center;
         gap: 0.25rem;
-        background: #f5f3ff;
-        color: #5b21b6 !important;
-        padding: 0.25rem 0.65rem;
+        background: #eff6ff;
+        color: #1e40af !important;
+        padding: 0.3rem 0.7rem;
         border-radius: 8px;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         font-family: 'JetBrains Mono', monospace;
         font-weight: 500;
-        border: 1px solid #ede9fe;
+        border: 1px solid #bfdbfe;
     }
     .source-chip .score {
-        background: #4c1d95;
+        background: #3b82f6;
         color: white;
-        padding: 0.1rem 0.35rem;
+        padding: 0.15rem 0.4rem;
         border-radius: 4px;
-        font-size: 0.62rem;
+        font-size: 0.65rem;
+        font-weight: 600;
     }
     
     /* Stats */
@@ -237,25 +246,26 @@ st.markdown("""
     }
     .stat-box {
         background: #ffffff;
-        border: 1px solid #e5e7eb;
+        border: 1px solid #e2e8f0;
         border-radius: 14px;
         padding: 1.1rem;
         text-align: center;
         transition: all 0.2s;
     }
     .stat-box:hover {
-        border-color: #c4b5fd;
-        box-shadow: 0 4px 12px rgba(109, 40, 217, 0.08);
+        border-color: #3b82f6;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+        transform: translateY(-2px);
     }
     .stat-number {
         font-size: 1.6rem;
         font-weight: 800;
-        color: #4c1d95;
+        color: #1e40af;
         line-height: 1;
     }
     .stat-label {
         font-size: 0.7rem;
-        color: #6b7280;
+        color: #64748b;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.04em;
@@ -264,8 +274,8 @@ st.markdown("""
     
     /* Sidebar */
     .sidebar-card {
-        background: #f9fafb;
-        border: 1px solid #e5e7eb;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
         border-radius: 14px;
         padding: 1.1rem;
         margin-bottom: 0.8rem;
@@ -273,19 +283,20 @@ st.markdown("""
     .sidebar-card h4 {
         font-size: 0.7rem;
         font-weight: 800;
-        color: #4c1d95;
+        color: #1e40af;
         text-transform: uppercase;
         letter-spacing: 0.08em;
         margin: 0 0 0.6rem 0;
     }
-    
+
     /* CTA button */
     .cta-box {
-        background: linear-gradient(135deg, #4c1d95, #7c3aed);
+        background: linear-gradient(135deg, #1e40af, #3b82f6);
         border-radius: 14px;
         padding: 1.2rem;
         text-align: center;
         margin-top: 1rem;
+        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
     }
     .cta-box a {
         color: white;
@@ -294,17 +305,17 @@ st.markdown("""
         font-size: 0.9rem;
     }
     .cta-box p {
-        color: #ddd6fe;
+        color: #dbeafe;
         font-size: 0.75rem;
         margin: 0.3rem 0 0 0;
     }
-    
+
     /* Sample Q buttons */
     .sample-q {
         display: inline-block;
-        background: #f5f3ff;
-        border: 1px solid #ede9fe;
-        color: #5b21b6;
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        color: #1e40af;
         padding: 0.5rem 1rem;
         border-radius: 100px;
         font-size: 0.82rem;
@@ -314,20 +325,20 @@ st.markdown("""
         transition: all 0.2s;
     }
     .sample-q:hover {
-        background: #ede9fe;
-        border-color: #c4b5fd;
+        background: #dbeafe;
+        border-color: #3b82f6;
     }
-    
+
     /* Footer */
     .footer {
         text-align: center;
         padding: 2rem 1rem;
-        color: #9ca3af;
+        color: #64748b;
         font-size: 0.78rem;
-        border-top: 1px solid #f3f4f6;
+        border-top: 1px solid #e2e8f0;
         margin-top: 2rem;
     }
-    .footer a { color: #6d28d9; text-decoration: none; font-weight: 600; }
+    .footer a { color: #1e40af; text-decoration: none; font-weight: 600; }
     
     /* Animations */
     @keyframes fadeIn {
