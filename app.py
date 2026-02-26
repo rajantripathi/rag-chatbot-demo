@@ -36,6 +36,13 @@ st.markdown("""
     .stApp {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background: #fafbfc;
+        color: #1f2937;
+    }
+    .stApp p, .stApp li, .stApp span, .stApp div {
+        color: #1f2937;
+    }
+    .stMarkdown p {
+        color: #1f2937 !important;
     }
     
     /* Hero Header */
@@ -177,10 +184,20 @@ st.markdown("""
         margin-right: 10%;
         font-size: 0.92rem;
         line-height: 1.65;
+        color: #1f2937;
         box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .msg-bot strong {
         color: #4c1d95;
+    }
+    .msg-bot em {
+        color: #6b7280;
+    }
+    .msg-bot blockquote {
+        color: #374151;
+        border-left: 3px solid #c4b5fd;
+        padding-left: 0.8rem;
+        margin: 0.5rem 0;
     }
     
     /* Source chips */
@@ -195,7 +212,7 @@ st.markdown("""
         align-items: center;
         gap: 0.25rem;
         background: #f5f3ff;
-        color: #5b21b6;
+        color: #5b21b6 !important;
         padding: 0.25rem 0.65rem;
         border-radius: 8px;
         font-size: 0.7rem;
